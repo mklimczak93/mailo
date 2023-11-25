@@ -1,12 +1,12 @@
-** MAILO – E-mail inbox app **
+**MAILO – E-mail inbox app**
 
 Video Demo: https://youtu.be/gcOJqGDBUxQ
 
-Description
+**Description**
 
 Mailo is a mailing application and was one of the first assignment of the CS50WEB course. This assignment focused on creating mainly the front-end of the app, while the backend was already provided by the course. 
  
- Main functionalities of the website:
+ **Main functionalities of the website:**
  
 -	Viewing  incoming, sent and archived messages in appropriate inboxes,
 -	Viewing whether the email was read or not,
@@ -30,7 +30,7 @@ Mailo is a mailing application and was one of the first assignment of the CS50WE
 ![05  Reply](https://github.com/mklimczak93/mailo/assets/123643355/619c5940-bf1a-4648-8c8a-722dff797b57)
 05. Replying
 
-Built with:
+**Built with:**
 
 -	Django,
 -	Python,
@@ -38,5 +38,9 @@ Built with:
 -	HTML + CSS,
 -	Bootstrap.
 
+**How to run**
 
+This application was designed with Django. To run project please use:
+
+python manage.py runserver
 
