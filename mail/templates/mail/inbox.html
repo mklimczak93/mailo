@@ -1,0 +1,76 @@
+{% extends "mail/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div class="container-fluid">
+
+    <div class="navbar">
+
+        {% load static %}
+        <img src="{% static 'mailo-logo-grey.png' %}" alt="Logo" width="160" height="80" style="margin-bottom:10px;">
+
+        <button class="btnnav" id="inbox">
+            <i class="fa-solid fa-inbox" style="margin-right:5px;"></i>
+            Inbox
+        </button>
+        <button class="btnnav" id="compose">
+            <i class="fa-solid fa-pen-to-square" style="margin-right:5px;"></i>
+            Compose
+        </button>
+        <button class="btnnav" id="sent">
+            <i class="fa-solid fa-paper-plane" style="margin-right:5px;"></i>
+            Sent
+        </button>
+        <button class="btnnav" id="archived">
+            <i class="fa-solid fa-box-archive" style="margin-right:5px;"></i>
+            Archived
+        </button>
+        <a class="btnnav" href="{% url 'logout' %}" style="margin-top:auto;">
+            <i class="fa-solid fa-right-from-bracket" style="margin-right:5px;"></i>
+            Log Out
+        </a>
+        <hr>
+    </div>
+
+    <div class="side-menu">
+        <div class="hello-menu">
+            <div class="photo-mockup-owner">
+            </div>
+            <div style="margin: 10px;">
+                <h4> Hello, {{ request.user.get_short_name }}!</h4>
+                <p style="font-size:14px;">
+                    You are currently logged in as: {{ request.user.email }}
+                </p>
+            </div>
+        </div>
+
+        <div id="emails-view">
+        </div>
+
+        <div id="chosen-email">
+        </div>
+
+        <div id="compose-view">
+            <h3>New Email</h3>
+            <form id="compose-form">
+                <div class="form-group">
+                    From: <input disabled class="form-control" value="{{ request.user.email }}" style="background:#e3dee8; border-color:#c6c7e1; color:white;">
+                </div>
+                <div class="form-group">
+                    To: <input id="compose-recipients" class="form-control" placeholder="Recipient">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" id="compose-subject" placeholder="Subject">
+                </div>
+                <textarea class="form-control" id="compose-body" placeholder="Body"></textarea>
+                <input type="submit" class="btn btn-primary"/>
+            </form>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'mail/inbox.js' %}"></script>
+{% endblock %}

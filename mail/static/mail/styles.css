@@ -1,0 +1,407 @@
+/* COLOR PALLETTE */
+/*
+intense-pink: #f195c6
+light-pink: #f2c9ce
+
+intense-blue: #ccfbff
+light-blue: #afc3e6
+
+light-grey-purple: #e3dee8
+grey-purple: #c6c7e1
+deeper-purple: #9c9bc6
+darker-purple: #79799b
+
+dark-purple font: #908397
+*/
+
+
+/* --- MAIN --- */
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    height: 100svh;
+    background: linear-gradient(90deg, #f2dadd 0%, #c9d4e9 100%);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Karla", "Arial", sans-serif;
+
+}
+
+.container-fluid {
+    margin: 0px;
+    padding: 0px;
+    width: 95vw;
+    height: 90vh;
+
+    background: rgba(255,255,255,0.2);
+    border-radius: 1rem;
+    border: 1px solid white;
+
+    display: flex;
+    flex-direction: row;
+}
+
+/* --- NAVBAR --- */
+
+.navbar {
+    width: 250px;
+    margin: 0;
+    padding: 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    background: rgba(255,255,255,0.5);
+    border-radius: 1rem;
+    border: 1px solid white;
+}
+
+.btnnav {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 50px;
+
+    display: block;
+    width: 100%;
+
+    background: rgba(255,255,255,0.2);
+    border: none;
+    outline: none;
+    text-align: left;
+    color: #908397;
+
+    transition-duration: 0.4s;
+
+}
+
+.btnnav:hover {
+    background-color: #F5EAEE;
+    color: white;
+  }
+
+.btnnav:focus {
+    outline: none;
+    /* box-shadow: offset-x | offset-y | blur-radius | color
+    box-shadow: -2px 0 0 #c6c7e1; */
+    border-left: 4px solid #c6c7e1;
+}
+
+.side-menu {
+    width: 90%;
+    height: 100%;
+    padding: 10px;
+
+}
+
+
+/* --- UPPER MENU --- */
+
+
+.hello-menu {
+    color: #908397;
+    height: 100px;
+    width:100%;
+    margin-bottom: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.photo-mockup-owner {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    background: #f2c9ce;
+    border-radius: 1rem;
+}
+
+
+/* --- INBOX --- */
+
+#emails-view {
+    max-height: 80%;
+    margin-top:-30px;
+    padding: 20px;
+
+    overflow-y: scroll
+}
+
+.mail_preview {
+    display: block;
+    width: 100%;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+
+    background: rgba(255,255,255,0.2);
+    border-radius: 1rem;
+    border: 2px solid white;
+    color: white;
+
+}
+
+.unread {
+    display: block;
+    width: 100%;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+
+    background: rgba(255,255,255,0.9);
+    border-radius: 1rem;
+    border: 1px solid white;
+    color: #908397;
+}
+
+.read {
+    display: block;
+    width: 100%;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+
+    background: rgba(255,255,255,0.2);
+    border-radius: 1rem;
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-view {
+    width: 120px;
+    height: 30px;
+
+    background: #e3dee8;
+    border: #e3dee8;
+
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    color: white;
+
+    transition-duration: 0.4s;
+}
+
+.btn-view:hover {
+    background: rgba(255,255,255,0.2);
+    outline: #908397;
+    border: #908397;
+    color: #908397;
+}
+
+.btn-view:focus {
+    background: rgba(255,255,255,0.2);
+    outline: #908397;
+    border: #908397;
+    color: #908397;
+}
+
+.email {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.photo-mockup {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+
+    background: #e3dee8;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+}
+
+.text-email {
+    width:90%;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.mail-heading {
+    width:100%;
+
+    justify-content: space-between;
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+/* --- DETAILED VIEW ---- */
+#chosen-email {
+    height: 77%;
+    width: 97%;
+}
+
+.detailed-email {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 97%;
+    margin: 20px;
+    padding: 20px;
+
+    overflow-y: scroll;
+
+    background: rgba(255,255,255,0.5);
+    border-radius: 1rem;
+    border: 1px solid white;
+}
+
+.detailed-heading {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.view-body{
+    height: 95%;
+    margin: 10px;
+    color: #908397;
+    display: flex;
+    flex: 1;
+}
+
+.text-heading {
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+    color: #908397;
+}
+
+.heading-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+
+
+/* --- COMPOSE ---- */
+
+#compose-view {
+    height: 75%;
+    width:100%;
+    padding: 20px;
+
+    overflow-y: scroll;
+    color: white;
+}
+
+textarea {
+    min-height: 400px;
+}
+
+
+/* --- LOGIN & SIGNUP --- */
+
+.login {
+    height: 480px;
+    width: 350px;
+    margin: auto;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    background: rgba(255,255,255,0.2);
+    border-radius: 1rem;
+    border: 2px solid white;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-primary {
+    display: block;
+    width: 100%;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    background: #9c9bc6;
+    border: none;
+
+    transition-duration: 0.4s;
+}
+
+.btn-primary:hover {
+    background-color: #79799b;
+    color: white;
+    border: none;
+    outline: none;
+  }
+
+/* --- HEADINGS --- */
+
+h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #908397;
+    margin-bottom: 20px;
+}
+
+h4 {
+    color: #908397;
+    font-weight: SemiBold;
+
+}
+
+
+
+/* --- SCROLLBAR --- */
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.5);
+    border-right: 5px solid rgba(0, 0, 0, 0);
+    border-bottom: 10px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    margin-top: 60px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #9c9bc6;
+    border-right: 5px solid rgba(0, 0, 0, 0);
+    border-bottom: 10px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #908397;
+    border-right: 5px solid rgba(0, 0, 0, 0);
+    border-bottom: 10px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+  }

@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Mail{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'mail/styles.css' %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
+
+        <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+        <script src="https://kit.fontawesome.com/95597707ec.js" crossorigin="anonymous"></script>
+
+         <!-- add icon link-->
+         {% load static %}
+         <link rel="icon"
+         type="image/x-icon"
+         href="{% static 'mailo_logo_only.png' %}">
+
+        {% block script %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container-fluid2">
+            {% block body %}
+            {% endblock %}
+
+        </div>
+    </body>
+</html>
